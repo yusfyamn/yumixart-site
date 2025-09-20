@@ -297,6 +297,119 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Categories Preview Section */}
+      <section className="py-16 lg:py-24 bg-apple-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="apple-large-text text-apple-gray-900 dark:text-gray-100 mb-4">
+              Browse Categories
+            </h2>
+            <p className="apple-body-text text-apple-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Find the perfect wallpaper for your style from our curated collections.
+            </p>
+          </div>
+
+          {/* Categories Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+            {/* 90s Style */}
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-400 via-pink-400 to-orange-300 aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white font-bold text-lg lg:text-xl">90s</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-white text-xs font-medium">Retro Vibes</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">90s Style</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">120+ Wallpapers</p>
+            </div>
+
+            {/* Nature */}
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-400 via-teal-400 to-blue-500 aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white font-bold text-lg lg:text-xl">🌿</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-white text-xs font-medium">Pure & Fresh</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">Nature</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">85+ Wallpapers</p>
+            </div>
+
+            {/* Abstract */}
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white font-bold text-lg lg:text-xl">∾</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-white text-xs font-medium">Creative Art</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">Abstract</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">95+ Wallpapers</p>
+            </div>
+
+            {/* Memoji */}
+            <div className="group cursor-pointer">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-400 via-orange-400 to-red-400 aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white font-bold text-lg lg:text-xl">🎭</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-white text-xs font-medium">Fun & Cool</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">Memoji</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">60+ Wallpapers</p>
+            </div>
+
+            {/* Minimalist - Mobilde görünmez, sadece md+ */}
+            <div className="group cursor-pointer hidden md:block">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-400 via-gray-300 to-white aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-gray-800 font-bold text-lg lg:text-xl">◯</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-gray-800 text-xs font-medium">Clean Design</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">Minimalist</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">70+ Wallpapers</p>
+            </div>
+
+            {/* Dark Mode - Sadece lg+ */}
+            <div className="group cursor-pointer hidden lg:block">
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black aspect-[4/5] mb-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105">
+                <div className="absolute inset-0 bg-white/10 group-hover:bg-white/15 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white font-bold text-lg lg:text-xl">●</div>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="text-white text-xs font-medium">Night Mode</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-apple-gray-900 dark:text-gray-100 text-sm lg:text-base">Dark Mode</h3>
+              <p className="text-xs lg:text-sm text-apple-gray-600 dark:text-gray-400">45+ Wallpapers</p>
+            </div>
+          </div>
+
+          {/* View All Categories Button */}
+          <div className="text-center mt-8 lg:mt-12">
+            <button className="hibrit-btn-secondary bg-white dark:bg-gray-800 text-apple-gray-700 dark:text-gray-200 px-6 py-3 lg:px-8 lg:py-4 rounded-full text-sm lg:text-base font-medium shadow-md hover:shadow-lg transition-all duration-200">
+              View All Categories
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* Comparison Table Section */}
       <section className="pt-24 pb-4 lg:py-32 bg-white dark:bg-dark-bg">
