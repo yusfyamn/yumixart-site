@@ -298,7 +298,7 @@ export default function HomePage() {
       </section>
 
       {/* Categories Preview Section */}
-      <section className="py-16 lg:py-24 bg-apple-gray-50 dark:bg-gray-900/50">
+      <section className="py-16 lg:py-24 bg-white dark:bg-dark-bg">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="apple-large-text text-apple-gray-900 dark:text-gray-100 mb-4">
