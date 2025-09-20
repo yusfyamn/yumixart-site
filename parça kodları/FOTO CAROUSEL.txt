@@ -1,0 +1,429 @@
+HTML
+
+<div class="relative w-full max-w-3xl snipcss-oTM8t style-MvdxT" id="style-MvdxT">
+    <div class="swiper swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress Carousal_002 h-[380px] w-[260px]">
+        <div class="swiper-wrapper style-G1Lv9" id="style-G1Lv9">
+            <div class="swiper-slide rounded-3xl style-8XxT5" data-swiper-slide-index="7" id="style-8XxT5"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/3.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-7CyWH" id="style-7CyWH"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-wUW1c" data-swiper-slide-index="8" id="style-wUW1c"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/4.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-MC9c1" id="style-MC9c1"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-vVcEx" data-swiper-slide-index="9" id="style-vVcEx"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/5.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-ecAwV" id="style-ecAwV"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev rounded-3xl style-TPaZT" data-swiper-slide-index="10" id="style-TPaZT"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/6.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-DEMcO" id="style-DEMcO"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active rounded-3xl style-pS2R9" data-swiper-slide-index="0" id="style-pS2R9"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/13.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-o1A2C" id="style-o1A2C"></div>
+            </div>
+            <div class="swiper-slide swiper-slide-next rounded-3xl style-m6L5m" data-swiper-slide-index="1" id="style-m6L5m"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/32.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-6oRUw" id="style-6oRUw"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-OjcNa" data-swiper-slide-index="2" id="style-OjcNa"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/20.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-Zth62" id="style-Zth62"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-ojonB" data-swiper-slide-index="3" id="style-ojonB"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/21.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-LodsT" id="style-LodsT"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-SpB4v" data-swiper-slide-index="4" id="style-SpB4v"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/19.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-JXWCH" id="style-JXWCH"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-15QkI" data-swiper-slide-index="5" id="style-15QkI"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/1.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-BcEGo" id="style-BcEGo"></div>
+            </div>
+            <div class="swiper-slide rounded-3xl style-A2Ppb" data-swiper-slide-index="6" id="style-A2Ppb"><img class="h-full w-full object-cover" alt="Illustrations by my fav AarzooAly" src="https://skiper-ui.com/images/x.com/2.jpeg">
+                <div class="swiper-slide-shadow swiper-slide-shadow-cards style-sIvI1" id="style-sIvI1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+CSS
+
+
+  body {  
+    color:var(--foreground);
+    background:var(--background);
+    font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");
+    line-height:1.5;
+  }  
+* { 
+    box-sizing: border-box; 
+    border: 0 solid; 
+    margin: 0; 
+    padding: 0;
+} 
+
+.h-full { 
+    height: 100%;
+} 
+
+.w-full { 
+    width: 100%;
+} 
+
+* { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+} 
+
+.rounded-3xl { 
+    border-radius: var(--radius-3xl);
+} 
+
+.relative { 
+    position: relative;
+} 
+
+@media (min-width: 64rem){ 
+  .lg\:flex { 
+    display: flex;
+  } 
+
+  .lg\:flex-row { 
+    flex-direction: row;
+  } 
+
+  .lg\:justify-end { 
+    justify-content: flex-end;
+  } 
+}     
+
+body { 
+    background-color: var(--background); 
+    color: var(--foreground);
+} 
+
+body { 
+    background: var(--background); 
+    color: var(--foreground); 
+    font-family: var(--font-inter);
+} 
+
+:root { 
+    --font-sans: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    --font-mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; 
+    --spacing: .25rem; 
+    --container-3xl: 48rem; 
+    --radius-3xl: 1.5rem; 
+    --ease-in-out: cubic-bezier(.4,0,.2,1); 
+    --default-transition-duration: .15s; 
+    --default-transition-timing-function: cubic-bezier(.4,0,.2,1); 
+    --default-font-family: var(--font-sans); 
+    --default-mono-font-family: var(--font-mono); 
+    --color-background: var(--background); 
+    --color-foreground: var(--foreground); 
+    --color-muted: var(--muted); 
+    --color-code1: var(--code1); 
+    --color-code2: var(--code2); 
+    --color-code3: var(--code3); 
+    --color-code4: var(--code4); 
+    --color-code5: var(--code5); 
+    --color-code6: var(--code6); 
+    --font-geist-mono: var(--font-geist-mono); 
+    --font-inter: "Inter",sans-serif; 
+    --font-custom: var(--font-custom); 
+    --font-jakarta-sans: var(--font-jakarta-sans); 
+    --font-old-school-grotesk: var(--font-old-school-grotesk),sans-serif;
+} 
+
+:root { 
+    --font-sans: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    --font-mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; 
+    --spacing: .25rem; 
+    --container-3xl: 48rem; 
+    --radius-3xl: 1.5rem; 
+    --ease-in-out: cubic-bezier(.4,0,.2,1); 
+    --default-transition-duration: .15s; 
+    --default-transition-timing-function: cubic-bezier(.4,0,.2,1); 
+    --default-font-family: var(--font-sans); 
+    --default-mono-font-family: var(--font-mono);
+} 
+
+html { 
+    -webkit-text-size-adjust: 100%; 
+    tab-size: 4; 
+    line-height: 1.5; 
+    font-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"); 
+    font-feature-settings: var(--default-font-feature-settings,normal); 
+    font-variation-settings: var(--default-font-variation-settings,normal); 
+    -webkit-tap-highlight-color: transparent;
+} 
+
+html { 
+    scroll-behavior: smooth;
+} 
+
+:root { 
+    --background: #fff; 
+    --foreground: #121212; 
+    --muted: #f5f4f3; 
+    --code1: #00000080; 
+    --code2: #6c6c6c80; 
+    --code3: #00bfff; 
+    --code4: #00000080; 
+    --code5: #4dc398; 
+    --code6: #00bfff; 
+} 
+
+.max-w-3xl { 
+    max-width: var(--container-3xl);
+} 
+
+*,:backdrop,:after,:before { 
+    box-sizing: border-box; 
+    border: 0 solid; 
+    margin: 0; 
+    padding: 0;
+} 
+
+:selection { 
+    color: #64c6ff; 
+    background: #83d1ff40;
+} 
+
+:-webkit-scrollbar { 
+    display: none;
+} 
+
+.h-\[380px\] { 
+    height: 380px;
+} 
+
+.w-\[260px\] { 
+    width: 260px;
+} 
+
+.swiper { 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: relative; 
+    overflow: hidden; 
+    list-style: none; 
+    padding: 0; 
+    z-index: 1; 
+    display: block;
+} 
+
+.swiper-horizontal { 
+    touch-action: pan-y;
+} 
+
+.swiper-3d { 
+    perspective: 1200px;
+} 
+
+.Carousal_002 { 
+    padding-bottom: 50px !important;
+} 
+
+.swiper.swiper-cards { 
+    overflow: visible;
+} 
+
+.swiper-wrapper { 
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+    display: flex; 
+    transition-property: transform; 
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial); 
+    box-sizing: content-box;
+} 
+
+.swiper-wrapper { 
+    transform: translateZ(0);
+} 
+
+.swiper-3d .swiper-wrapper  { 
+    transform-style: preserve-3d;
+} 
+
+.swiper-slide { 
+    flex-shrink: 0; 
+    width: 100%; 
+    height: 100%; 
+    position: relative; 
+    transition-property: transform; 
+    display: block;
+} 
+
+.swiper-3d .swiper-slide  { 
+    transform-style: preserve-3d;
+} 
+
+.swiper-cards .swiper-slide  { 
+    transform-origin: center bottom; 
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden; 
+    overflow: hidden;
+} 
+
+img { 
+    vertical-align: middle; 
+    display: block;
+} 
+
+img { 
+    max-width: 100%; 
+    height: auto;
+} 
+
+.object-cover { 
+    object-fit: cover;
+} 
+
+.swiper-3d .swiper-slide-shadow  { 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    z-index: 10;
+} 
+
+.swiper-3d .swiper-slide-shadow  { 
+    background: rgba(0,0,0,.15);
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-MvdxT.style-MvdxT {  
+   opacity: 1;  
+    transform: none;  
+}  
+#style-G1Lv9.style-G1Lv9 {  
+   cursor: grab;  
+    transform: translateX(0px);  
+    transition-duration: 0ms;  
+    transition-delay: 0ms;  
+}  
+#style-8XxT5.style-8XxT5 {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 7;  
+    transform: translate3d(calc(-20% + 0px), 0px, -400px) rotateZ(-8deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-7CyWH.style-7CyWH {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-wUW1c.style-wUW1c {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 8;  
+    transform: translate3d(calc(-17.25% - 300px), 0px, -300px) rotateZ(-6deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-MC9c1.style-MC9c1 {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-vVcEx.style-vVcEx {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 9;  
+    transform: translate3d(calc(-13% - 600px), 0px, -200px) rotateZ(-4deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-ecAwV.style-ecAwV {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-TPaZT.style-TPaZT {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 10;  
+    transform: translate3d(calc(-7.25% - 900px), 0px, -100px) rotateZ(-2deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-DEMcO.style-DEMcO {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-pS2R9.style-pS2R9 {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 11;  
+    transform: translate3d(-1200px, 0px, 0px) rotateZ(0deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-o1A2C.style-o1A2C {  
+   opacity: 0;  
+    transition-duration: 0ms;  
+}  
+#style-m6L5m.style-m6L5m {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 10;  
+    transform: translate3d(calc(7.25% - 1500px), 0px, -100px) rotateZ(2deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-6oRUw.style-6oRUw {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-OjcNa.style-OjcNa {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 9;  
+    transform: translate3d(calc(13% - 1800px), 0px, -200px) rotateZ(4deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-Zth62.style-Zth62 {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-ojonB.style-ojonB {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 8;  
+    transform: translate3d(calc(17.25% - 2100px), 0px, -300px) rotateZ(6deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-LodsT.style-LodsT {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-SpB4v.style-SpB4v {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 7;  
+    transform: translate3d(calc(20% - 2400px), 0px, -400px) rotateZ(8deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-JXWCH.style-JXWCH {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-15QkI.style-15QkI {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 6;  
+    transform: translate3d(calc(20% - 2700px), 0px, -400px) rotateZ(8deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-BcEGo.style-BcEGo {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  
+#style-A2Ppb.style-A2Ppb {  
+   width: 260px;  
+    margin-right: 40px;  
+    z-index: 5;  
+    transform: translate3d(calc(20% - 3000px), 0px, -400px) rotateZ(8deg) scale(1);  
+    transition-duration: 0ms;  
+}  
+#style-sIvI1.style-sIvI1 {  
+   opacity: 1;  
+    transition-duration: 0ms;  
+}  

@@ -1,0 +1,524 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SF Pro Display Font Tanımlamaları */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../font/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../font/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../font/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../font/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bright';
+  src: url('../font/Bright.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-apple-gray-900 font-sf-pro;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Background will be set dynamically by each page */
+  }
+}
+
+@layer components {
+  /* Apple-style Primary Button */
+  .apple-btn-primary {
+    @apply bg-apple-blue text-white px-6 py-3 rounded-full font-medium tracking-tight hover:bg-apple-blue-hover transition-all duration-200 ease-out;
+    font-size: 17px;
+    line-height: 1.23536;
+    min-width: 23px;
+  }
+  
+  /* Apple-style Secondary Button */
+  .apple-btn-secondary {
+    @apply bg-transparent text-apple-blue border border-apple-blue px-6 py-3 rounded-full font-medium tracking-tight hover:bg-apple-blue hover:text-white transition-all duration-200 ease-out;
+    font-size: 17px;
+    line-height: 1.23536;
+  }
+  
+  /* Apple-style Link Button */
+  .apple-btn-link {
+    @apply text-apple-blue font-medium hover:underline transition-all duration-200 ease-out;
+    font-size: 17px;
+    line-height: 1.23536;
+  }
+  
+  /* Apple-style Card */
+  .apple-card {
+    @apply bg-white rounded-2xl shadow-apple hover:shadow-apple-lg transition-all duration-300 ease-out;
+  }
+  
+  /* Apple-style Hero Text */
+  .apple-hero-text {
+    font-size: clamp(48px, 5.5vw, 80px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+  }
+  
+  /* Apple-style Large Text */
+  .apple-large-text {
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Apple-style Body Text */
+  .apple-body-text {
+    font-size: 21px;
+    line-height: 1.38095;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+  }
+  
+  /* Apple-style Section Padding */
+  .apple-section {
+    @apply py-4 md:py-20 lg:py-32;
+  }
+  
+  /* Hero Section - Balanced padding for mobile */
+  .hero-section {
+    @apply pt-4 pb-4 md:py-20 lg:py-32;
+  }
+  
+  /* Kayan Resimler Animasyonları */
+  .crypt-scroll {
+    @apply overflow-hidden cursor-pointer block;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .image-slider {
+    @apply flex items-center gap-2;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: hr_scroll 120s linear infinite forwards;
+    padding-block: 0;
+  }
+  
+  .crypt-scrolling {
+    @apply flex items-center gap-4 py-4;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: hr_scroll 30s linear infinite forwards;
+  }
+  
+  
+  .scroll-right {
+    animation-direction: reverse;
+  }
+  
+  .image-slider img {
+    @apply w-80 h-80 rounded-xl object-cover;
+  }
+  
+  /* Alt Menu Animasyonu */
+  .animate-slide-up {
+    animation: slideUpMenu 0.8s ease-out;
+  }
+  
+  /* Bottom-up Menu Animasyonu */
+  .animate-slide-up-menu {
+    animation: slideUpFromBottom 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  /* Apple Loading Screen */
+  .apple-loading-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  .apple-hello-animation {
+    animation: helloFadeIn 2s ease-out forwards;
+  }
+
+  /* Hızlı Hello Animasyonu */
+  .hello-fast-animation {
+    animation: helloFastIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  /* Hibrit Hero Background - Combined Gradyan + Grid */
+  .hero-grid-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    will-change: transform;
+    transform: translateZ(0);
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+      linear-gradient(
+        135deg,
+        rgba(74, 222, 128, 0.030) 0%,   /* light green - daha belirgin */
+        rgba(20, 184, 166, 0.035) 35%,  /* teal - daha belirgin */
+        rgba(59, 130, 246, 0.030) 70%,  /* blue - daha belirgin */
+        rgba(147, 51, 234, 0.025) 100% /* purple - daha belirgin */
+      );
+    background-size: 50px 50px, 50px 50px, 100% 100%;
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 8%,
+      rgba(0, 0, 0, 0.95) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.05) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 8%,
+      rgba(0, 0, 0, 0.95) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.05) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Dark Mode - Hibrit Background */
+  .dark .hero-grid-bg::before {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+      linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.02) 0%,   /* blue */
+        rgba(147, 51, 234, 0.025) 35%,  /* purple */
+        rgba(236, 72, 153, 0.015) 70%,  /* pink */
+        rgba(20, 184, 166, 0.012) 100%  /* teal */
+      );
+  }
+
+  /* Hibrit Navbar Glassmorphism */
+  .navbar-hibrit-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(74, 222, 128, 0.08) 0%,   /* light green - daha belirgin */
+      rgba(20, 184, 166, 0.10) 35%,  /* teal - daha belirgin */
+      rgba(59, 130, 246, 0.08) 70%,  /* blue - daha belirgin */
+      rgba(147, 51, 234, 0.06) 100%  /* purple - daha belirgin */
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Dark Mode - Hibrit Navbar */
+  .dark .navbar-hibrit-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.08) 0%,   /* blue */
+      rgba(147, 51, 234, 0.10) 35%,  /* purple */
+      rgba(236, 72, 153, 0.06) 70%,  /* pink */
+      rgba(20, 184, 166, 0.05) 100%  /* teal */
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Hibrit Floating Action Bar */
+  .floating-hibrit-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(74, 222, 128, 0.10) 0%,   /* light green - daha belirgin */
+      rgba(20, 184, 166, 0.12) 35%,  /* teal - daha belirgin */
+      rgba(59, 130, 246, 0.10) 70%,  /* blue - daha belirgin */
+      rgba(147, 51, 234, 0.08) 100%  /* purple - daha belirgin */
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Dark Mode - Hibrit Floating Action Bar */
+  .dark .floating-hibrit-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.10) 0%,   /* blue */
+      rgba(147, 51, 234, 0.12) 35%,  /* purple */
+      rgba(236, 72, 153, 0.08) 70%,  /* pink */
+      rgba(20, 184, 166, 0.06) 100%  /* teal */
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Dark Mode Text Gradyanları - Hibrit Navbar ile Uyumlu */
+  .dark-hibrit-text-gradient {
+    background: linear-gradient(
+      135deg,
+      #3b82f6 0%,   /* blue */
+      #9333ea 35%,  /* purple */
+      #ec4899 70%,  /* pink */
+      #14b8a6 100%  /* teal */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Retro Logo Styling */
+  .retro-logo {
+    font-family: 'Bright', 'Times New Roman', serif;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .retro-logo-yumix {
+    color: #000; /* açık tema - siyah */
+    transition: color 0.3s ease;
+  }
+
+  .dark .retro-logo-yumix {
+    color: #fff; /* koyu tema - beyaz */
+  }
+
+  .retro-logo-art {
+    background: linear-gradient(
+      135deg,
+      #4ade80 0%,   /* light green */
+      #14b8a6 35%,  /* teal */
+      #3b82f6 70%,  /* blue */
+      #9333ea 100%  /* purple */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .dark .retro-logo-art {
+    background: linear-gradient(
+      135deg,
+      #3b82f6 0%,   /* blue */
+      #9333ea 35%,  /* purple */
+      #ec4899 70%,  /* pink */
+      #14b8a6 100%  /* teal */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Responsive logo sizes */
+  .retro-logo-sm {
+    font-size: 1.875rem; /* 30px - mobile navbar - daha da büyütüldü */
+    line-height: 1.2;
+  }
+
+  .retro-logo-md {
+    font-size: 1.5rem; /* 24px - desktop navbar */
+    line-height: 1.2;
+  }
+
+  .retro-logo-lg {
+    font-size: 2rem; /* 32px - footer */
+    line-height: 1.2;
+  }
+
+  .retro-logo-xl {
+    font-size: 2.5rem; /* 40px - headings */
+    line-height: 1.1;
+  }
+
+  /* Hibrit Primary Button - Gradyan */
+  .hibrit-btn-primary {
+    background: linear-gradient(
+      135deg,
+      #4ade80 0%,   /* light green */
+      #14b8a6 35%,  /* teal */
+      #3b82f6 70%,  /* blue */
+      #9333ea 100%  /* purple */
+    );
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hibrit-btn-primary:hover {
+    background: linear-gradient(
+      135deg,
+      #22c55e 0%,   /* darker green */
+      #0891b2 35%,  /* darker teal */
+      #2563eb 70%,  /* darker blue */
+      #7c3aed 100%  /* darker purple */
+    );
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Dark Mode Hibrit Primary Button */
+  .dark .hibrit-btn-primary {
+    background: linear-gradient(
+      135deg,
+      #3b82f6 0%,   /* blue */
+      #9333ea 35%,  /* purple */
+      #ec4899 70%,  /* pink */
+      #14b8a6 100%  /* teal */
+    );
+  }
+
+  .dark .hibrit-btn-primary:hover {
+    background: linear-gradient(
+      135deg,
+      #2563eb 0%,   /* darker blue */
+      #7c3aed 35%,  /* darker purple */
+      #db2777 70%,  /* darker pink */
+      #0891b2 100%  /* darker teal */
+    );
+  }
+
+  /* Hibrit Secondary Button - Gradient Border */
+  .hibrit-btn-secondary {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hibrit-btn-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(
+      135deg,
+      #4ade80 0%,   /* light green */
+      #14b8a6 35%,  /* teal */
+      #3b82f6 70%,  /* blue */
+      #9333ea 100%  /* purple */
+    );
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+  }
+
+  .dark .hibrit-btn-secondary::before {
+    background: linear-gradient(
+      135deg,
+      #3b82f6 0%,   /* blue */
+      #9333ea 35%,  /* purple */
+      #ec4899 70%,  /* pink */
+      #14b8a6 100%  /* teal */
+    );
+  }
+}
+
+@keyframes hr_scroll {
+  100% {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes slideUpMenu {
+  0% {
+    transform: translateY(100px) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes helloFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideUpFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes helloFastIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
