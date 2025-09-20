@@ -105,16 +105,16 @@ export default function HomePage() {
       {/* Ana Sayfa - Loading sırasında arka planda yükleniyor */}
       <main className={`min-h-screen bg-white dark:bg-dark-bg hero-grid-bg ${isLoading ? 'opacity-0' : 'animate-fadeIn'}`}>
       {/* Navigation */}
-      <nav className="py-4 md:sticky md:top-0 z-[200] md:py-8">
+      <nav className="py-4 lg:sticky lg:top-0 z-[200] lg:py-8">
         {/* Mobile: Simple centered logo */}
-        <div className="md:hidden text-center pt-8">
+        <div className="lg:hidden text-center pt-8">
           <div className="retro-logo retro-logo-sm">
             <span className="retro-logo-yumix">yumix</span><span className="retro-logo-art">art</span>
           </div>
         </div>
         
         {/* Desktop: Full navbar (restored) */}
-        <div className="hidden md:block max-w-6xl mx-auto px-6">
+        <div className="hidden lg:block max-w-6xl mx-auto px-6">
           <div className="navbar-hibrit-glass rounded-full px-6 py-4 transform transition-all duration-300 hover:shadow-xl">
             <div className="flex items-center justify-between">
               {/* Left Logo */}
@@ -147,8 +147,8 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-8 pb-16 md:pt-20 md:pb-20 lg:pt-24 lg:pb-32 bg-white dark:bg-dark-bg relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 md:px-6 relative">
+      <section className="pt-8 pb-16 lg:pt-24 lg:pb-32 bg-white dark:bg-dark-bg relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
             {/* Sol Taraf - Yazılar */}
             <div className="flex-1 text-center lg:text-left">
@@ -168,7 +168,7 @@ export default function HomePage() {
               </h1>
 
               <div className="flex justify-center lg:justify-start">
-                <button className="hibrit-btn-primary px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium shadow-lg">
+                <button className="hibrit-btn-primary px-6 py-3 lg:px-8 lg:py-4 rounded-full text-base lg:text-lg font-medium shadow-lg">
                   Explore Collection
                 </button>
               </div>
@@ -299,11 +299,11 @@ export default function HomePage() {
 
 
       {/* Comparison Table Section */}
-      <section className="pt-24 pb-4 md:py-20 lg:py-32 bg-white dark:bg-dark-bg">
-        <div className="max-w-6xl mx-auto px-2 md:px-6">
-          <div className="text-center mb-4 md:mb-16 px-4 md:px-0">
+      <section className="pt-24 pb-4 lg:py-32 bg-white dark:bg-dark-bg">
+        <div className="max-w-6xl mx-auto px-2 lg:px-6">
+          <div className="text-center mb-4 lg:mb-16 px-4 lg:px-0">
            <h2 className="apple-large-text text-apple-gray-900 dark:text-gray-100 mb-4">
-              Why <span className="retro-logo retro-logo-lg md:retro-logo-xl inline"><span className="retro-logo-yumix">yumix</span><span className="retro-logo-art">art</span></span>
+              Why <span className="retro-logo retro-logo-lg lg:retro-logo-xl inline"><span className="retro-logo-yumix">yumix</span><span className="retro-logo-art">art</span></span>
             </h2>
             <p className="apple-body-text text-apple-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Learn why people choose us.
@@ -311,23 +311,23 @@ export default function HomePage() {
           </div>
 
           {/* Uploaded Table Image */}
-          <div className="w-full md:max-w-3xl mx-auto">
+          <div className="w-full lg:max-w-3xl mx-auto">
             {/* Mobile: Different images for dark/light mode */}
             <img 
               src={isDarkMode ? "/table - mobile - dark.png" : "/table - mobile - light.png"}
               alt="YumixArt vs Others Comparison Table" 
-              className="w-full h-auto md:hidden"
+              className="w-full h-auto lg:hidden"
             />
             {/* Desktop: Different images for dark/light mode */}
             <img 
               src={isDarkMode ? "/table - desktop - dark.png" : "/table - desktop - light.png"}
               alt="YumixArt vs Others Comparison Table" 
-              className="w-full h-auto hidden md:block"
+              className="w-full h-auto hidden lg:block"
             />
             
             {/* CTA Button */}
-            <div className="text-center -mt-4 md:mt-8">
-              <button className="hibrit-btn-primary px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+            <div className="text-center -mt-4 lg:mt-8">
+              <button className="hibrit-btn-primary px-6 py-3 lg:px-8 lg:py-4 rounded-full text-base lg:text-lg font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
                 Start Exploring
               </button>
             </div>
