@@ -413,7 +413,7 @@ export default function HomePage() {
 
       {/* Background Blur Overlay */}
       {isFullScreenMenuOpen && (
-        <div className="fixed inset-0 z-[80] md:hidden">
+        <div className="fixed inset-0 z-[80] lg:hidden">
           <div
             className="absolute inset-0 bg-black/10 backdrop-blur-sm"
             onClick={() => setIsFullScreenMenuOpen(false)}
@@ -423,7 +423,7 @@ export default function HomePage() {
 
       {/* Compact Mobile Menu Popup */}
       {isFullScreenMenuOpen && (
-        <div className="fixed inset-0 z-[90] md:hidden pointer-events-none">
+        <div className="fixed inset-0 z-[90] lg:hidden pointer-events-none">
           {/* Menu Popup */}
           <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 pointer-events-auto">
             <div className="floating-hibrit-glass rounded-2xl animate-slide-up-menu p-5 min-w-[280px] transition-all duration-300 hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)]">
@@ -454,7 +454,7 @@ export default function HomePage() {
 
       {/* Alt Menu - Minimal Floating Action Bar - Mobile Horizontal, Desktop Vertical */}
       {/* Mobile: Horizontal bottom bar */}
-      <div className="md:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[100] animate-slide-up">
+      <div className="lg:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[100] animate-slide-up">
         <div className="inline-flex items-center justify-center overflow-hidden p-3 rounded-full floating-hibrit-glass gap-1 transition-all duration-300 hover:shadow-[0_15px_50px_rgba(0,0,0,0.18)]">
           <button className="flex items-center justify-center transition-colors hover:bg-white/20">
             <div className="group relative flex size-9 items-center justify-center rounded-full p-1.5 hover:bg-white/15">
