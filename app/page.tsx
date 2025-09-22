@@ -249,12 +249,11 @@ export default function HomePage() {
                     grabCursor={true}
                     modules={[EffectCards, Autoplay]}
                     className="h-[380px] w-[260px] lg:h-[580px] lg:w-[420px] overflow-visible pb-[50px]"
-                    autoplay={{
+                    autoplay={isHeroVisible ? {
                       delay: 2000,
                       disableOnInteraction: false,
                       pauseOnMouseEnter: true,
-                      enabled: isHeroVisible, // 🚀 Smart Swiper Control
-                    }}
+                    } : false}
                     loop={true}
                   >
                     <SwiperSlide className="rounded-3xl">
