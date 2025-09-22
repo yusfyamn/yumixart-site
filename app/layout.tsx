@@ -27,8 +27,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="font-sf-pro antialiased">
+    <html lang="en" className="scroll-smooth dark">
+      <body className="font-sf-pro antialiased bg-neutral-900" style={{ backgroundColor: '#171717' }}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('darkMode');
+                const isDark = theme === null ? true : theme === 'true';
+                if (isDark) {
+                  document.documentElement.classList.add('dark');
+                  document.body.style.backgroundColor = '#171717';
+                } else {
+                  document.documentElement.classList.remove('dark');
+                  document.body.style.backgroundColor = '#ffffff';
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
         {children}
       </body>
     </html>
