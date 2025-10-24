@@ -12,7 +12,6 @@ import {
 import { Menu, MoveRight, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { ThemeToggle } from "./ThemeToggle";
 import { Logo } from "./Logo";
 
 export const Header1 = () => {
@@ -77,7 +76,7 @@ export const Header1 = () => {
   return (
     <header className="w-full z-50 fixed top-0 left-0">
       <div className="container mx-auto px-4 pt-4 lg:pt-6">
-        <div className="relative bg-background/90 backdrop-blur-md border-2 rounded-full min-h-14 lg:min-h-20 flex gap-2 lg:gap-4 flex-row lg:grid lg:grid-cols-3 items-center px-4 lg:px-6 shadow-xl border-border/50">
+        <div className="relative bg-gradient-to-r from-neutral-800 to-black backdrop-blur-md border-2 rounded-full min-h-12 lg:min-h-16 flex gap-2 lg:gap-4 flex-row lg:grid lg:grid-cols-3 items-center px-4 lg:px-6 shadow-xl border-border/50">
         <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
           <NavigationMenu className="flex justify-start items-start">
             <NavigationMenuList className="flex justify-start gap-4 flex-row">
@@ -86,15 +85,15 @@ export const Header1 = () => {
                   {item.href ? (
                     <>
                       <NavigationMenuLink>
-                        <Button variant="ghost">{item.title}</Button>
+                        <Button variant="ghost" className="hover:bg-black/20 hover:text-white">{item.title}</Button>
                       </NavigationMenuLink>
                     </>
                   ) : (
                     <>
-                      <NavigationMenuTrigger className="font-medium text-sm">
+                      <NavigationMenuTrigger className="font-medium text-sm !bg-transparent hover:!bg-black/20 hover:!text-white focus:!bg-black/20 focus:!text-white data-[active]:!bg-black/20 data-[state=open]:!bg-black/20 border-none text-white">
                         {item.title}
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="!w-[450px] p-4">
+                      <NavigationMenuContent className="!w-[450px] p-4 border-0 bg-gradient-to-r from-neutral-800 to-black text-white">
                         <div className="flex flex-col lg:grid grid-cols-2 gap-4">
                           <div className="flex flex-col h-full justify-between">
                             <div className="flex flex-col">
@@ -112,10 +111,10 @@ export const Header1 = () => {
                               <NavigationMenuLink
                                 href={subItem.href}
                                 key={subItem.title}
-                                className="flex flex-row justify-between items-center hover:bg-muted py-2 px-4 rounded"
+                                className="flex flex-row justify-between items-center hover:bg-black/30 py-2 px-4 rounded text-white"
                               >
                                 <span>{subItem.title}</span>
-                                <MoveRight className="w-4 h-4 text-muted-foreground" />
+                                <MoveRight className="w-4 h-4 text-gray-400" />
                               </NavigationMenuLink>
                             ))}
                           </div>
@@ -132,12 +131,10 @@ export const Header1 = () => {
           <Logo />
         </div>
         <div className="hidden lg:flex justify-end w-full gap-4">
-          <ThemeToggle />
-          <Button variant="outline">Sign in</Button>
-          <Button>Get started</Button>
+          <Button variant="outline" className="hover:bg-black hover:text-white border-white/20">Sign in</Button>
+          <Button className="hover:bg-black/80">Get started</Button>
         </div>
         <div className="flex lg:hidden items-center justify-end w-full gap-0">
-          <ThemeToggle />
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
@@ -204,8 +201,8 @@ export const Header1 = () => {
               </div>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t">
-              <Button variant="outline" className="w-full">Sign in</Button>
-              <Button className="w-full">Get started</Button>
+              <Button variant="outline" className="w-full hover:bg-black hover:text-white">Sign in</Button>
+              <Button className="w-full hover:bg-black/80">Get started</Button>
             </div>
           </div>
           </>

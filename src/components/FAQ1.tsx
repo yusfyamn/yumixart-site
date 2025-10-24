@@ -15,7 +15,7 @@ export const FAQ1 = () => (
         <div className="flex gap-6 lg:gap-10 flex-col">
           <div className="flex gap-4 flex-col">
             <div>
-              <Badge variant="outline">FAQ</Badge>
+              <Badge>FAQ</Badge>
             </div>
             <div className="flex gap-2 lg:gap-3 flex-col">
               <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter max-w-xs sm:max-w-md lg:max-w-xl text-left font-regular">
